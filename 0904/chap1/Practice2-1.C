@@ -10,3 +10,5 @@ system("cls");
 printf("입력된 문자 %c\n", ch);
 return 0;
 }
+
+// 화면 지우기
