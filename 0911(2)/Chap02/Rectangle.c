@@ -3,16 +3,16 @@ void draw_square(int size);
 int main(void)
 {
 	int n;
-	printf("Á¤»ç°¢Çü ±×¸®±â\n\n");
-	printf("Á¤»ç°¢ÇüÀÇ ±æÀÌ(ÃÖ´ë 37)¸¦\n");
-	printf("ÀÔ·ÂÇÏ°í Enter>");
+	printf("ì •ì‚¬ê°í˜• ê·¸ë¦¬ê¸°\n\n");
+	printf("ì •ì‚¬ê°í˜•ì˜ ê¸¸ì´(ìµœëŒ€ 37)ë¥¼\n");
+	printf("ì…ë ¥í•˜ê³  Enter>");
 	scanf("%d", &n);
 	
 	draw_square(n);
 	return 0;
 }
 
-// Æ¯¼ö¹®ÀÚ ¹è¿­ ÃÊ±âÈ­
+// íŠ¹ìˆ˜ë¬¸ì ë°°ì—´ ì´ˆê¸°í™”
 void draw_square(int size)
 {
 	int i, j;
@@ -22,14 +22,14 @@ void draw_square(int size)
 	for (i = 1; i < 7; i++)
     	b[i] = 0xa0 + i;
     
-	//»ó´Ü Å×µÎ¸® Ãâ·Â 
+	//ìƒë‹¨ í…Œë‘ë¦¬ ì¶œë ¥ 
 	printf("%c%c",a, b[3]);
 	for(i=0;i<size;i++)
 	printf("%c%c", a, b[1]);
 	printf("%c%c", a, b[4]);
 	printf("\n");
 
-	// Áß°£ ¼¼·Î ¿µ¿ª Ãâ·Â
+	// ì¤‘ê°„ ì„¸ë¡œ ì˜ì—­ ì¶œë ¥
 	for(i=0;i<size;i++)
 	{
 		printf("%c%c", a, b[2]);
@@ -39,10 +39,12 @@ void draw_square(int size)
 		printf("\n");
 	}
 
-	// ÇÏ´Ü Å×µÎ¸® Ãâ·Â
+	// í•˜ë‹¨ í…Œë‘ë¦¬ ì¶œë ¥
 	printf("%c%c", a, b[6]);
 	for(i=0;i<size;i++)
 		printf("%c%c", a, b[1]);
 	printf("%c%c", a, b[5]);
 	printf("\n");
 }
+
+// ê¸¸ì´ê°€ nì¸ í‘œì¤€ ì •ì‚¬ê°í˜• ì¶œë ¥
