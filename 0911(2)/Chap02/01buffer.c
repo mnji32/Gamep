@@ -6,14 +6,15 @@ int main()
     char c;
 
     fgets(string, sizeof(string), stdin);
-    // fgets는 엔터(\n)까지 저장
+    // 엔터(\n)까지 저장
 
     scanf(" %c", &c);
-
+    // 앞에 공백을 넣어 \n을 건너뜀 
+    
     printf("%s", string);
     printf("!!%c!!\n", c);
 
     return 0;
 }
 
-// C언어에서 입력 버퍼 비우기
+// C언어 문자열 및 문자 연속 입력 처리
