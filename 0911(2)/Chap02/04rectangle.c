@@ -1,5 +1,7 @@
 #include <stdio.h>
+
 void draw_square(int size);
+
 int main(void)
 {
 	int n;
@@ -19,31 +21,34 @@ void draw_square(int size)
 	unsigned char a = 0xa6;
 	unsigned char b[7]; 
 
-	for (i = 1; i < 7; i++)
-    	b[i] = 0xa0 + i;
+	for (i = 1; i < 7; i++){
+		b[i] = 0xa0 + i;
+	}
     
 	//상단 테두리 출력 
-	printf("%c%c",a, b[3]);
-	for(i=0;i<size;i++)
-	printf("%c%c", a, b[1]);
-	printf("%c%c", a, b[4]);
+	printf("%c%c",a, b[3]); // 좌측 상단 모서리 
+	for(i=0;i<size*2;i++) {
+		printf("%c%c", a, b[1]); // 가로선 size번 반복 
+	}
+	printf("%c%c", a, b[4]); // 우측 상단 모서리 
 	printf("\n");
 
 	// 중간 세로 영역 출력
 	for(i=0;i<size;i++)
 	{
-		printf("%c%c", a, b[2]);
-		for(j=0;j<size;j++)
-			printf(" ");
-		printf("%c%c",a, b[2]);
+		printf("%c%c", a, b[2]); // 좌측 세로선 
+		for(j=0;j<size*2;j++)
+		printf(" "); // 내부 공백 
+		printf("%c%c",a, b[2]); // 우측 세로선 
 		printf("\n");
 	}
 
 	// 하단 테두리 출력
-	printf("%c%c", a, b[6]);
-	for(i=0;i<size;i++)
-		printf("%c%c", a, b[1]);
-	printf("%c%c", a, b[5]);
+	printf("%c%c", a, b[6]); // 좌측 하단 모서리 
+	for(i=0;i<size*2;i++){
+		printf("%c%c", a, b[1]); // 가로선 size번 반복 
+	}
+	printf("%c%c", a, b[5]); // 우측 하단 모서리 
 	printf("\n");
 }
 
