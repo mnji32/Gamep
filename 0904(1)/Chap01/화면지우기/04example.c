@@ -4,16 +4,16 @@
 
 int main(void)
 {
-int i, j;
-for(j=1;j<=9;j++)
-{
-system("cls");
-for(i=1;i<=9;i++)
-printf("%d*%d=%d\n", j, i, j*i);
-printf("아무키나 누르시오.\n");
-getch();
-}
-return 0;
+    int i, j;
+    for (j = 1; j <= 9; j++)
+    {
+        system("cls");
+        for (i = 1; i <= 9; i++)
+            printf("%d*%d=%d\n", j, i, j * i);
+        printf("아무키나 누르시오.\n");
+        getch();
+    }
+    return 0;
 }
 
 // 1단부터 9단까지 구구단을 한 단씩 화면에 출력
