@@ -9,12 +9,12 @@
 대입 연산자(=)를 기준, 좌변에는 변수(L-value), 우변에는 하나의 값으로 평가되는 표현식(R-value)이 위치
 
 - 구조: Assignment = Statement / Variable = Expression
-| 표현식 | 종류 | 예시 |	설명 |
-| **Literal (or Constant)** | a = 1; | 순수한 고정 데이터 값 대입 |
-| **Variable** | a = b; | 다른 변수의 값을 읽어와서 대입 |
-| **Operator** | a = b + 1; | 연산자를 통해 계산된 결과값 대입 |
-| **Function** | a = sum(1, 2) * 6; | 함수의 반환 값을 연산 후 대입 |
-
+| 표현식 종류 | 예시 | 설명 |
+| :--- | :--- | :--- |
+| Literal (or Constant) | a = 1; | 순수한 고정 데이터 값 대입 |
+| Variable | a = b; | 다른 변수의 값을 읽어와서 대입 |
+| Operator | a = b + 1; | 연산자를 통해 계산된 결과값 대입 |
+| Function | a = sum(1, 2) * 6; | 함수의 반환 값을 연산 후 대입 |
 ---
 
 ### 2. getch()
