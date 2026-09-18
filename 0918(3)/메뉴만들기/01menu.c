@@ -37,11 +37,11 @@ int menu_display(void)
 
     system("cls");
 
-    printf("°£½Ä ¸¸µé±â\n\n");
-    printf("1. ÇÜ¹ö°Å \n");
-    printf("2. ½ºÆÄ°ÔÆ¼\n");
-    printf("3. ÇÁ·Î±×·¥ Á¾·á\n\n");
-    printf("¸Ş´º¹øÈ£ ÀÔ·Â>");
+    printf("ê°„ì‹ ë§Œë“¤ê¸°\n\n");
+    printf("1. í–„ë²„ê±° \n");
+    printf("2. ìŠ¤íŒŒê²Œí‹°\n");
+    printf("3. í”„ë¡œê·¸ë¨ ì¢…ë£Œ\n\n");
+    printf("ë©”ë‰´ë²ˆí˜¸ ì…ë ¥>");
 
     select = getch() - 48;
 
@@ -52,8 +52,8 @@ void hamburger(void)
 {
     system("cls");
 
-    printf("ÇÜ¹ö°Å ¸¸µå´Â ¹æ¹ı\n");
-    printf("Áß·«\n");
+    printf("í–„ë²„ê±° ë§Œë“œëŠ” ë°©ë²•\n");
+    printf("ì¤‘ëµ\n");
 
     press_any_key();
 }
@@ -62,8 +62,8 @@ void spaghetti(void)
 {
     system("cls");
 
-    printf("½ºÆÄ°ÔÆ¼ ¸¸µå´Â ¹æ¹ı\n");
-    printf("Áß·«\n");
+    printf("ìŠ¤íŒŒê²Œí‹° ë§Œë“œëŠ” ë°©ë²•\n");
+    printf("ì¤‘ëµ\n");
 
     press_any_key();
 }
@@ -71,9 +71,9 @@ void spaghetti(void)
 void press_any_key(void)
 {
     printf("\n\n");
-    printf("¾Æ¹«Å°³ª ´©¸£¸é ¸ŞÀÎ ¸Ş´º·Î...");
+    printf("ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ë©´ ë©”ì¸ ë©”ë‰´ë¡œ...");
 
     getch();
 }
 
-// ÇÜ¹ö°Å & ½ºÆÄ°ÔÆ¼ ·¹½ÃÇÇ ÇÁ·Î±×·¥ 
+// í–„ë²„ê±° & ìŠ¤íŒŒê²Œí‹° ë ˆì‹œí”¼ í”„ë¡œê·¸ë¨ 
