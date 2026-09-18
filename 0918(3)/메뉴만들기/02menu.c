@@ -39,18 +39,18 @@ int menu_display(void)
     int select;
 
     system("cls");
-    printf("°£½Ä ¸¸µé±â\n\n");
-    printf("1. ÇÜ¹ö°Å \n");
-    printf("2. ½ºÆÄ°ÔÆ¼\n");
-    printf("3. ÇÁ·Î±×·¥ Á¾·á\n\n");
-    printf("¸Ş´º¹øÈ£ ÀÔ·Â>");
+    printf("ê°„ì‹ ë§Œë“¤ê¸°\n\n");
+    printf("1. í–„ë²„ê±° \n");
+    printf("2. ìŠ¤íŒŒê²Œí‹°\n");
+    printf("3. í”„ë¡œê·¸ë¨ ì¢…ë£Œ\n\n");
+    printf("ë©”ë‰´ë²ˆí˜¸ ì…ë ¥>");
 
     select = getch() - 48;
 
     return select;
 }
 
-// ÇÜ¹ö°Å 
+// í–„ë²„ê±° 
 void sub_main01(void)
 {
     int c;
@@ -74,11 +74,11 @@ int sub_menu_display01(void)
 {
     int select;
     system("cls");
-    printf("ÇÜ¹ö°Å ¸¸µé±â\n\n");
-    printf("1. Ä¡Å²¹ö°Å\n");
-    printf("2. Ä¡Áî¹ö°Å\n");
-    printf("3. ¸ŞÀÎ ¸Ş´º·Î ÀÌµ¿\n\n");
-    printf("¸Ş´º¹øÈ£ ÀÔ·Â>");
+    printf("í–„ë²„ê±° ë§Œë“¤ê¸°\n\n");
+    printf("1. ì¹˜í‚¨ë²„ê±°\n");
+    printf("2. ì¹˜ì¦ˆë²„ê±°\n");
+    printf("3. ë©”ì¸ ë©”ë‰´ë¡œ ì´ë™\n\n");
+    printf("ë©”ë‰´ë²ˆí˜¸ ì…ë ¥>");
     select = getch() - 48;
     return select;
 }
@@ -86,20 +86,20 @@ int sub_menu_display01(void)
 void chicken_burger(void)
 {
     system("cls");
-    printf("Ä¡Å²¹ö°Å ¸¸µå´Â ¹æ¹ı\n");
-    printf("Áß·«\n");
+    printf("ì¹˜í‚¨ë²„ê±° ë§Œë“œëŠ” ë°©ë²•\n");
+    printf("ì¤‘ëµ\n");
     press_any_key();
 }
 
 void cheese_burger(void)
 {
     system("cls");
-    printf("Ä¡Áî¹ö°Å ¸¸µå´Â ¹æ¹ı\n");
-    printf("Áß·«\n");
+    printf("ì¹˜ì¦ˆë²„ê±° ë§Œë“œëŠ” ë°©ë²•\n");
+    printf("ì¤‘ëµ\n");
     press_any_key();
 }
 
-// ½ºÆÄ°ÔÆ¼ 
+// ìŠ¤íŒŒê²Œí‹° 
 void sub_main02(void)
 {
     int c;
@@ -123,11 +123,11 @@ int sub_menu_display02(void)
 {
     int select;
     system("cls");
-    printf("½ºÆÄ°ÔÆ¼ ¸¸µé±â\n\n");
-    printf("1. Åä¸¶Åä ½ºÆÄ°ÔÆ¼ \n");
-    printf("2. Å©¸² ½ºÆÄ°ÔÆ¼ \n");
-    printf("3. ¸ŞÀÎ ¸Ş´º·Î ÀÌµ¿\n\n");
-    printf("¸Ş´º¹øÈ£ ÀÔ·Â>");
+    printf("ìŠ¤íŒŒê²Œí‹° ë§Œë“¤ê¸°\n\n");
+    printf("1. í† ë§ˆí†  ìŠ¤íŒŒê²Œí‹° \n");
+    printf("2. í¬ë¦¼ ìŠ¤íŒŒê²Œí‹° \n");
+    printf("3. ë©”ì¸ ë©”ë‰´ë¡œ ì´ë™\n\n");
+    printf("ë©”ë‰´ë²ˆí˜¸ ì…ë ¥>");
     select = getch() - 48;
     return select;
 }
@@ -135,24 +135,24 @@ int sub_menu_display02(void)
 void tomato_spaghetti(void)
 {
     system("cls");
-    printf("Åä¸¶Åä ½ºÆÄ°ÔÆ¼ ¸¸µå´Â ¹æ¹ı\n");
-    printf("Áß·«\n");
+    printf("í† ë§ˆí†  ìŠ¤íŒŒê²Œí‹° ë§Œë“œëŠ” ë°©ë²•\n");
+    printf("ì¤‘ëµ\n");
     press_any_key();
 }
 
 void cream_spaghetti(void)
 {
     system("cls");
-    printf("Å©¸² ½ºÆÄ°ÔÆ¼ ¸¸µå´Â ¹æ¹ı\n");
-    printf("Áß·«\n");
+    printf("í¬ë¦¼ ìŠ¤íŒŒê²Œí‹° ë§Œë“œëŠ” ë°©ë²•\n");
+    printf("ì¤‘ëµ\n");
     press_any_key();
 }
 
 void press_any_key(void)
 {
     printf("\n\n");
-    printf("¾Æ¹«Å°³ª ´©¸£¸é ÀÌÀü ¸Ş´º·Î...");
+    printf("ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ë©´ ì´ì „ ë©”ë‰´ë¡œ...");
     getch();
 }
 
-// ÇÜ¹ö°Å & ½ºÆÄ°ÔÆ¼ ·¹½ÃÇÇ ÇÁ·Î±×·¥(2) - ¼­ºê ¸Ş´º 
+// í–„ë²„ê±° & ìŠ¤íŒŒê²Œí‹° ë ˆì‹œí”¼ í”„ë¡œê·¸ë¨(2) - ì„œë¸Œ ë©”ë‰´ 
