@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>허접한 원본 머지 게임 v0.1</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      background-color: #f4f4f4;
+    }
+    #board {
+      display: grid;
+      grid-template-columns: repeat(4, 80px);
+      grid-template-rows: repeat(4, 80px);
+      gap: 5px;
+      background-color: #999;
+      padding: 5px;
+      margin: 20px 0;
+    }
+    .cell {
+      width: 80px;
+      height: 80px;
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .item {
+      width: 65px;
+      height: 65px;
+      background-color: #ccc;
+      border: 1px solid #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      cursor: grab;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>머지 게임 v0.1</h2>
+  <div>점수: <span id="score">0</span></div>
+  
+  <div id="board"></div>
+  
+  <button onclick="spawnItem()">아이템 생성</button>
+
+  <script>
+    const ROWS = 4;
+    const COLS = 4;
+    let grid = Array(ROWS * COLS).fill(0); // 0은 빈칸, 1 이상은 아이템 레벨
+    let score = 0;
+    let draggedIndex = null;
+
+    const boardEl = document.getElementById("board");
+    const scoreEl = document.getElementById("score");
+
+    // 보드 렌더링
+    function render() {
+      boardEl.innerHTML = "";
+      grid.forEach((level, index) => {
+        const cell = document.createElement("div");
+        cell.className = "cell";
+
+        // 드롭 허용
+        cell.ondragover = (e) => e.preventDefault();
+        cell.ondrop = () => handleDrop(index);
+
+        if (level > 0) {
+          const item = document.createElement("div");
+          item.className = "item";
+          item.draggable = true;
+          item.innerText = "Lv." + level;
+          item.ondragstart = () => { draggedIndex = index; };
+          cell.appendChild(item);
+        }
+
+        boardEl.appendChild(cell);
+      });
+      scoreEl.innerText = score;
+    }
+
+    // 빈 칸에 Lv.1 아이템 무작위 생성
+    function spawnItem() {
+      const emptyIndices = grid
+        .map((val, idx) => (val === 0 ? idx : null))
+        .filter((val) => val !== null);
+
+      if (emptyIndices.length === 0) {
+        alert("보드가 가득 찼습니다!");
+        return;
+      }
+
+      const randomIdx = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
+      grid[randomIdx] = 1;
+      render();
+    }
+
+    // 드래그 앤 드롭 머지 로직
+    function handleDrop(targetIndex) {
+      if (draggedIndex === null || draggedIndex === targetIndex) return;
+
+      const sourceLevel = grid[draggedIndex];
+      const targetLevel = grid[targetIndex];
+
+      if (targetLevel === 0) {
+        // 빈 칸으로 이동
+        grid[targetIndex] = sourceLevel;
+        grid[draggedIndex] = 0;
+      } else if (sourceLevel === targetLevel) {
+        // 같은 레벨이면 머지(합체)
+        grid[targetIndex] = targetLevel + 1;
+        grid[draggedIndex] = 0;
+        score += grid[targetIndex] * 10;
+      }
+      // 다른 레벨이면 아무 일도 안 일어남
+
+      draggedIndex = null;
+      render();
+    }
+
+    render();
+  </script>
+</body>
+</html>
