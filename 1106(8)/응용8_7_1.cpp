@@ -27,9 +27,9 @@ int main(void)
     end=clock();
 	pst=(double)(end-start)/CLK_TCK;
 	gotoxy(1, 13);
-	printf("°æ°ú ½Ã°£ : %.1f ÃÊ", pst);
+	printf("ê²½ê³¼ ì‹œê°„ : %.1f ì´ˆ", pst);
 	gotoxy(1, 14);
-	printf("¸ğµÎ Ã£¾Ò½À´Ï´Ù. °ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù. \n");
+	printf("ëª¨ë‘ ì°¾ì•˜ìŠµë‹ˆë‹¤. ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤. \n");
 	getch();
 	return 0;
 }
@@ -37,16 +37,16 @@ int main(void)
 void display_rule(void)
 {
 	gotoxy(1, 1);
-	printf("º¸¹°Ã£±â");
+	printf("ë³´ë¬¼ì°¾ê¸°");
 	gotoxy(1,3);
-	printf("¾Æ·¡ÀÇ ¹ÙµÏÆÇ ¸ğ¾çÀÇ °İÀÚ¿¡´Â º¸¹°ÀÌ \n");
+	printf("ì•„ë˜ì˜ ë°”ë‘‘íŒ ëª¨ì–‘ì˜ ê²©ìì—ëŠ” ë³´ë¬¼ì´ \n");
 	gotoxy(1,4);
-	printf("¼û°ÜÁ® ÀÖ½À´Ï´Ù. \n");
+	printf("ìˆ¨ê²¨ì ¸ ìˆìŠµë‹ˆë‹¤. \n");
 	gotoxy(1,5);
-	printf("È­»ìÇ¥(¡è¡é¡ç¡æ)Å°¸¦ ¿òÁ÷¿©¼­ Ã£½À´Ï´Ù. \n");
+	printf("í™”ì‚´í‘œ(â†‘â†“â†â†’)í‚¤ë¥¼ ì›€ì§ì—¬ì„œ ì°¾ìŠµë‹ˆë‹¤. \n");
 	gotoxy(1,7);
 	basic_map();
-	printf("\n¾Æ¹«Å°³ª ´©¸£¸é ½ÃÀÛÇÕ´Ï´Ù. \n");
+	printf("\nì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ë©´ ì‹œì‘í•©ë‹ˆë‹¤. \n");
 	getch();
 }
 
@@ -56,7 +56,7 @@ void basic_map(void)
 	for(i=0;i<10;i++)
 	{
 		for(j=0;j<10;j++)
-			printf("¡á");
+			printf("â– ");
 		printf("\n");
 	}
 }
@@ -69,8 +69,8 @@ void make_treasure(int tx[], int ty[])
     {
 		do
 		{
-			tx[i]=rand()%11; //º¸¹°ÀÇ xÁÂÇ¥
-			ty[i]=rand()%11; //º¸¹°ÀÇ yÁÂÇ¥
+			tx[i]=rand()%11; //ë³´ë¬¼ì˜ xì¢Œí‘œ
+			ty[i]=rand()%11; //ë³´ë¬¼ì˜ yì¢Œí‘œ
 		}while((tx[i]<=1) || (ty[i]<=1));  
      }
 }
@@ -92,33 +92,33 @@ void display_map(int matrix[][11], int tx[], int ty[])
 			if (matrix[i][j]==1)
 			{
 				gotoxy(2*i-1, j);
-				printf("¡à");
+				printf("â–¡");
 			}
 			else if (matrix[i][j]==2)
 			{
 				gotoxy(2*i-1, j);
-				printf("¡Ú");
+				printf("â˜…");
 			}	
 }
 void move_arrow_key(char key, int *x1, int *y1, int x_b, int y_b)
 {
 	switch(key)
 	{
-	case 72:  //À§ÂÊ(»ó) ¹æÇâÀÇ È­»ìÇ¥ Å° ÀÔ·Â
+	case 72:  //ìœ„ìª½(ìƒ) ë°©í–¥ì˜ í™”ì‚´í‘œ í‚¤ ì…ë ¥
 		*y1=*y1-1;
-		if (*y1<1)	*y1=1; //yÁÂÇ¥ÀÇ ÃÖ¼Ò°ª
+		if (*y1<1)	*y1=1; //yì¢Œí‘œì˜ ìµœì†Œê°’
 		break;
-	case 75:  //¿ŞÂÊ(ÁÂ) ¹æÇâÀÇ È­»ìÇ¥ Å° ÀÔ·Â
-		*x1=*x1-2;            //xÁÂÇ¥ÀÇ °¨¼Ò°ª
-		if (*x1<1)	*x1=1; //xÁÂÇ¥ÀÇ ÃÖ¼Ò°ª
+	case 75:  //ì™¼ìª½(ì¢Œ) ë°©í–¥ì˜ í™”ì‚´í‘œ í‚¤ ì…ë ¥
+		*x1=*x1-2;            //xì¢Œí‘œì˜ ê°ì†Œê°’
+		if (*x1<1)	*x1=1; //xì¢Œí‘œì˜ ìµœì†Œê°’
 		break;
-	case 77:  //¿À¸¥ÂÊ(¿ì) ¹æÇâÀÇ È­»ìÇ¥ Å° ÀÔ·Â
-		*x1=*x1+2;               //xÁÂÇ¥ÀÇ Áõ°¡°ª
-		if (*x1>x_b)  *x1=x_b; //xÁÂÇ¥ÀÇ ÃÖ´ë°ª
+	case 77:  //ì˜¤ë¥¸ìª½(ìš°) ë°©í–¥ì˜ í™”ì‚´í‘œ í‚¤ ì…ë ¥
+		*x1=*x1+2;               //xì¢Œí‘œì˜ ì¦ê°€ê°’
+		if (*x1>x_b)  *x1=x_b; //xì¢Œí‘œì˜ ìµœëŒ€ê°’
 		break;
-	case 80:  //¾Æ·¡ÂÊ(ÇÏ) ¹æÇâÀÇ È­»ìÇ¥ Å° ÀÔ·Â
+	case 80:  //ì•„ë˜ìª½(í•˜) ë°©í–¥ì˜ í™”ì‚´í‘œ í‚¤ ì…ë ¥
 		*y1=*y1+1;
-		if (*y1>y_b)  *y1=y_b; //yÁÂÇ¥ÀÇ ÃÖ´ë°ª
+		if (*y1>y_b)  *y1=y_b; //yì¢Œí‘œì˜ ìµœëŒ€ê°’
 		break;
 	default:
 		return;
@@ -134,7 +134,7 @@ void game_control(int tx[], int ty[])
 	do
 	{
 		gotoxy(x, y);
-		printf("¡à");
+		printf("â–¡");
 		matrix[(x+1)/2][y]=1;
 
 		for(i=0;i<2;i++)
@@ -150,7 +150,7 @@ void game_control(int tx[], int ty[])
 				if (matrix[i][j]==2)
 					count=count+1;
 		gotoxy(1,12);
-   		printf("Ã£Àº º¸¹°(¡Ú)ÀÇ °³¼ö : %d", count);
+   		printf("ì°¾ì€ ë³´ë¬¼(â˜…)ì˜ ê°œìˆ˜ : %d", count);
 		key=getch();
 		move_arrow_key(key, &x, &y, 19, 10);
 	}while(count<2);
