@@ -36,7 +36,7 @@ int main(void)
         {
             system("cls");
             set_color(15);
-            printf("\n°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù!\n");
+            printf("\nê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤!\n");
             break;
         }
 
@@ -67,7 +67,7 @@ int main(void)
         display_result(found_count, move_count, pst);
 
         set_color(13);
-        printf("\n\n\n [ R : ´Ù½Ã ½ÃÀÛ (Restart)  |  Q : °ÔÀÓ Á¾·á (Quit) ]\n\n");
+        printf("\n\n\n [ R : ë‹¤ì‹œ ì‹œì‘ (Restart)  |  Q : ê²Œì„ ì¢…ë£Œ (Quit) ]\n\n");
 
         int loop_break = 0;
         while (1)
@@ -88,7 +88,7 @@ int main(void)
         {
             system("cls");
             set_color(15);
-            printf("\n°ÔÀÓÀ» ÇÃ·¹ÀÌÇØ ÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù!\n");
+            printf("\nê²Œì„ì„ í”Œë ˆì´í•´ ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤!\n");
             break;
         }
     }
@@ -109,7 +109,7 @@ void set_color(int color)
 
 void set_window_title(void)
 {
-    SetConsoleTitle("¡Ú º¸¹°Ã£±â °ÔÀÓ: VER 2.0 ¡Ú");
+    SetConsoleTitle("â˜… ë³´ë¬¼ì°¾ê¸° ê²Œì„: VER 2.0 â˜…");
 }
 
 int display_main_menu(void)
@@ -129,27 +129,27 @@ int display_main_menu(void)
         gotoxy(9, 6); printf(" |_| |_|_\\|___|/_/ \\_\\___/ \\___/ |_|_\\|___| |_||_|\\___/|_|\\_| |_|  ");
 
         set_color(11); gotoxy(23, 9);
-        printf("¡Ú ¼û°ÜÁø º¸¹°À» Ã£¾Æ¶ó! ¡Ú");
+        printf("â˜… ìˆ¨ê²¨ì§„ ë³´ë¬¼ì„ ì°¾ì•„ë¼! â˜…");
 
         set_color(13); gotoxy(5, 11);
-        printf("¦£¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¤");
+        printf("â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”");
         for (int i = 12; i <= 18; i++) {
             gotoxy(5, i);
-			printf("¦¢                                                               ¦¢");
+			printf("â”‚                                                               â”‚");
         }
-        gotoxy(5, 19); printf("¦¦¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¥");
+        gotoxy(5, 19); printf("â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜");
 
         set_color(15); gotoxy(18, 13);
-        printf(" [ 1 ]  ¢º   °Ô ÀÓ ½Ã ÀÛ  (Start Game)");
+        printf(" [ 1 ]  â–¶   ê²Œ ì„ ì‹œ ì‘  (Start Game)");
         
         gotoxy(18, 15);
-        printf(" [ 2 ]  ¢º   °Ô ÀÓ ¼³ ¸í  (Game Rules)");
+        printf(" [ 2 ]  â–¶   ê²Œ ì„ ì„¤ ëª…  (Game Rules)");
         
         gotoxy(18, 17); set_color(12);
-        printf(" [ 3 ]  ¢º   °Ô ÀÓ Á¾ ·á  (Exit Game)");
+        printf(" [ 3 ]  â–¶   ê²Œ ì„ ì¢… ë£Œ  (Exit Game)");
 
         set_color(10); gotoxy(16, 21);
-        printf("¢º ¿øÇÏ´Â ¸Ş´ºÀÇ ¹øÈ£ [ 1 ~ 3 ] Å°¸¦ ´©¸£¼¼¿ä: ");
+        printf("â–¶ ì›í•˜ëŠ” ë©”ë‰´ì˜ ë²ˆí˜¸ [ 1 ~ 3 ] í‚¤ë¥¼ ëˆ„ë¥´ì„¸ìš”: ");
         
         char ch = getch();
         if (ch == '1') return 1;
@@ -163,43 +163,43 @@ void display_rule(void)
     system("cls");
 
     gotoxy(4, 2); set_color(7);
-    printf("¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬");
+    printf("â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”");
     gotoxy(4, 3); set_color(7);
-    printf("                      °ÔÀÓ ¼³¸í & Á¶ÀÛ ¹æ¹ı                    ");
+    printf("                      ê²Œì„ ì„¤ëª… & ì¡°ì‘ ë°©ë²•                    ");
     gotoxy(4, 4); set_color(7);
-    printf("¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬");
+    printf("â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”");
 
-    gotoxy(6, 6); set_color(11); printf("¢º  ¹Ì¼Ç ¸ñÇ¥");
-    gotoxy(8, 7); set_color(7); printf("- 10x10 °İÀÚ¿¡ ¼û°ÜÁø ");
-    set_color(14); printf("3°³");
-    set_color(7); printf("ÀÇ º¸¹°À» ¸ğµÎ È¹µæÇÏ¼¼¿ä.");
-    gotoxy(8, 8); set_color(7); printf("- ÁÖ¾îÁø ");
-    set_color(14); printf("ÀÌµ¿ È½¼ö");
-    set_color(7); printf(" ÀÌ³»¿¡ ¸ğ¾Æ¾ß Å½Çè ¼º°ø!");
+    gotoxy(6, 6); set_color(11); printf("â–¶  ë¯¸ì…˜ ëª©í‘œ");
+    gotoxy(8, 7); set_color(7); printf("- 10x10 ê²©ìì— ìˆ¨ê²¨ì§„ ");
+    set_color(14); printf("3ê°œ");
+    set_color(7); printf("ì˜ ë³´ë¬¼ì„ ëª¨ë‘ íšë“í•˜ì„¸ìš”.");
+    gotoxy(8, 8); set_color(7); printf("- ì£¼ì–´ì§„ ");
+    set_color(14); printf("ì´ë™ íšŸìˆ˜");
+    set_color(7); printf(" ì´ë‚´ì— ëª¨ì•„ì•¼ íƒí—˜ ì„±ê³µ!");
 
-    gotoxy(6, 10); set_color(11); printf("¢º  Æ¯¼ö ¿ä¼Ò");
-    gotoxy(8, 11); set_color(12); printf(" ÇÔÁ¤ [X]");
-    set_color(7); printf(" : ¹âÀ¸¸é 3ÃÊ°£ ÀÌµ¿ ºÒ°¡");
-    gotoxy(8, 12); set_color(14); printf(" ÈùÆ® [H]");
-    set_color(7); printf(" : ³²Àº º¸¹°±îÁö °Å¸® Å½Áö (ÃÖ´ë 3È¸)");
+    gotoxy(6, 10); set_color(11); printf("â–¶  íŠ¹ìˆ˜ ìš”ì†Œ");
+    gotoxy(8, 11); set_color(12); printf(" í•¨ì • [X]");
+    set_color(7); printf(" : ë°Ÿìœ¼ë©´ 3ì´ˆê°„ ì´ë™ ë¶ˆê°€");
+    gotoxy(8, 12); set_color(14); printf(" íŒíŠ¸ [H]");
+    set_color(7); printf(" : ë‚¨ì€ ë³´ë¬¼ê¹Œì§€ ê±°ë¦¬ íƒì§€ (ìµœëŒ€ 3íšŒ)");
 
-    gotoxy(6, 14); set_color(11); printf("¢º  Á¡¼ö »êÃâ °ø½Ä");
-    gotoxy(8, 15); set_color(7); printf(" (³²Àº ÀÌµ¿ È½¼ö ¡¿ 20Á¡) - (¼Ò¿ä ½Ã°£ ¡¿ 2Á¡)");
-    gotoxy(8, 16); set_color(13); printf(" S+"); set_color(7); printf(" : 1,100Á¡ ÀÌ»ó   ");
-    set_color(14); printf(" S"); set_color(7); printf(" : 850Á¡ ÀÌ»ó");
-    gotoxy(8, 17); set_color(10); printf(" A "); set_color(7); printf(" :   500Á¡ ÀÌ»ó   ");
-    set_color(10); printf(" B"); set_color(7); printf(" : 500Á¡ ¹Ì¸¸ (½ÇÆĞ ½Ã F)");
+    gotoxy(6, 14); set_color(11); printf("â–¶  ì ìˆ˜ ì‚°ì¶œ ê³µì‹");
+    gotoxy(8, 15); set_color(7); printf(" (ë‚¨ì€ ì´ë™ íšŸìˆ˜ Ã— 20ì ) - (ì†Œìš” ì‹œê°„ Ã— 2ì )");
+    gotoxy(8, 16); set_color(13); printf(" S+"); set_color(7); printf(" : 1,100ì  ì´ìƒ   ");
+    set_color(14); printf(" S"); set_color(7); printf(" : 850ì  ì´ìƒ");
+    gotoxy(8, 17); set_color(10); printf(" A "); set_color(7); printf(" :   500ì  ì´ìƒ   ");
+    set_color(10); printf(" B"); set_color(7); printf(" : 500ì  ë¯¸ë§Œ (ì‹¤íŒ¨ ì‹œ F)");
     // ------------------------------------
 
-    gotoxy(6, 19); set_color(11); printf("¢º  Á¶ÀÛ ¹æ¹ı");
-    gotoxy(8, 20); set_color(15); printf(" ÀÌµ¿ : "); set_color(7); printf("¹æÇâÅ°  ¶Ç´Â  W, A, S, D");
-    gotoxy(8, 21); set_color(15); printf(" ÈùÆ® : "); set_color(7); printf("H Å° (º¸¹° °Å¸® ÈùÆ® Â÷°¨)");
-    gotoxy(8, 22); set_color(15); printf(" Á¤Áö : "); set_color(7); printf("ESC Å°");
+    gotoxy(6, 19); set_color(11); printf("â–¶  ì¡°ì‘ ë°©ë²•");
+    gotoxy(8, 20); set_color(15); printf(" ì´ë™ : "); set_color(7); printf("ë°©í–¥í‚¤  ë˜ëŠ”  W, A, S, D");
+    gotoxy(8, 21); set_color(15); printf(" íŒíŠ¸ : "); set_color(7); printf("H í‚¤ (ë³´ë¬¼ ê±°ë¦¬ íŒíŠ¸ ì°¨ê°)");
+    gotoxy(8, 22); set_color(15); printf(" ì •ì§€ : "); set_color(7); printf("ESC í‚¤");
 
     gotoxy(4, 24); set_color(8);
     printf("-------------------------------------------------------------------");
     gotoxy(14, 26); set_color(11);
-    printf("¢º ¾Æ¹« Å°³ª ´©¸£¸é Ä«¿îÆ®´Ù¿î ÈÄ °ÔÀÓÀÌ ½ÃÀÛµË´Ï´Ù ¢¸");
+    printf("â–¶ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ë©´ ì¹´ìš´íŠ¸ë‹¤ìš´ í›„ ê²Œì„ì´ ì‹œì‘ë©ë‹ˆë‹¤ â—€");
 
     getch();
 }
@@ -209,7 +209,7 @@ void countdown(void)
     system("cls");
     gotoxy(1, 4);
     set_color(15);
-    printf("     °ÔÀÓÀ» ÁØºñÇÏ´Â ÁßÀÔ´Ï´Ù...\n\n");
+    printf("     ê²Œì„ì„ ì¤€ë¹„í•˜ëŠ” ì¤‘ì…ë‹ˆë‹¤...\n\n");
 
     for (int i = 3; i >= 1; i--)
     {
@@ -259,41 +259,41 @@ void display_result(int count, int move_count, double pst)
     }
 
     gotoxy(1, 2); set_color(8);
-    printf("¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬");
+    printf("â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”");
     
     gotoxy(1, 3);
     if (count >= 3)
     {
         set_color(14);
-        printf("                  ¡Ú GAME CLEAR : º¸¹° Ã£±â ¼º°ø ¡Ú                   ");
+        printf("                  â˜… GAME CLEAR : ë³´ë¬¼ ì°¾ê¸° ì„±ê³µ â˜…                   ");
     }
     else
     {
         set_color(12);
-        printf("                  ¡Ú GAME OVER : º¸¹° Ã£±â ½ÇÆĞ ¡Ú                    ");
+        printf("                  â˜… GAME OVER : ë³´ë¬¼ ì°¾ê¸° ì‹¤íŒ¨ â˜…                    ");
     }
 
     gotoxy(1, 4); set_color(8);
-    printf("¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬");
+    printf("â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”");
     
     gotoxy(1, 6); set_color(11);
-    printf(" [ º¸¹°Ã£±â °á°ú ¸®Æ÷Æ® ]");
+    printf(" [ ë³´ë¬¼ì°¾ê¸° ê²°ê³¼ ë¦¬í¬íŠ¸ ]");
     
-    gotoxy(1, 8); set_color(15); printf("   ÃÑ ¼Ò¿ä ½Ã°£  :  ");
-    set_color(7); printf("%dºĞ %dÃÊ", minutes, seconds);
+    gotoxy(1, 8); set_color(15); printf("   ì´ ì†Œìš” ì‹œê°„  :  ");
+    set_color(7); printf("%dë¶„ %dì´ˆ", minutes, seconds);
 
-    gotoxy(1, 9); set_color(15); printf("   ÃÑ ÀÌµ¿ È½¼ö  :  ");
-    set_color(7); printf("%d / 75 È¸", move_count);
+    gotoxy(1, 9); set_color(15); printf("   ì´ ì´ë™ íšŸìˆ˜  :  ");
+    set_color(7); printf("%d / 75 íšŒ", move_count);
 
-    gotoxy(1, 10); set_color(15); printf("   È¹µæÇÑ º¸¹°   :  ");
-    set_color(7); printf("%d / 3 °³", count);
+    gotoxy(1, 10); set_color(15); printf("   íšë“í•œ ë³´ë¬¼   :  ");
+    set_color(7); printf("%d / 3 ê°œ", count);
 
     gotoxy(1, 12); set_color(14);
-    printf("   ÃÖÁ¾ »êÃâ Á¡¼ö"); 
-    set_color(15); printf("  :  %d Á¡ ", score);
+    printf("   ìµœì¢… ì‚°ì¶œ ì ìˆ˜"); 
+    set_color(15); printf("  :  %d ì  ", score);
 
     set_color(rank_color);
-    printf("[ %s µî±Ş ]", rank);
+    printf("[ %s ë“±ê¸‰ ]", rank);
 }
 
 void basic_map(void)
@@ -306,7 +306,7 @@ void basic_map(void)
         set_color(15);
         for (j = 0; j < 10; j++)
         {
-            printf("¡á ");
+            printf("â–  ");
         }
     }
 }
@@ -323,13 +323,13 @@ void display_map(int matrix[][11])
             {
                 gotoxy(2 * i + 3, j + 5);
                 set_color(15);
-                printf("¡à");
+                printf("â–¡");
             }
             else if (matrix[i][j] == 2)
             {
                 gotoxy(2 * i + 3, j + 5);
                 set_color(14);
-                printf("¡Ú");
+                printf("â˜…");
             }
             else if (matrix[i][j] == 3)
             {
@@ -395,7 +395,7 @@ void move_arrow_key(char key, int *x1, int *y1, int x_b, int y_b, int *valid_mov
     default:
         *valid_move = 0;
         gotoxy(1, 22); set_color(12);
-        printf("[°æ°í] Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù! (¹æÇâÅ°, WASD, H, ESC¸¸ °¡´É)                    "); 
+        printf("[ê²½ê³ ] ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤! (ë°©í–¥í‚¤, WASD, H, ESCë§Œ ê°€ëŠ¥)                    "); 
         return; 
     }
     
@@ -448,7 +448,7 @@ int game_control(int tx[], int ty[], int hx[], int hy[], int *found_count)
                     
                     gotoxy(1, 22);
                     set_color(12);
-                    printf("[ÇÔÁ¤] ¹ßÀÌ ¹­¿´½À´Ï´Ù! (3ÃÊ°£ ÀÌµ¿ÇÒ ¼ö ¾ø½À´Ï´Ù)                        ");
+                    printf("[í•¨ì •] ë°œì´ ë¬¶ì˜€ìŠµë‹ˆë‹¤! (3ì´ˆê°„ ì´ë™í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤)                        ");
                     Beep(200, 300);
                     Sleep(3000);
                     
@@ -471,37 +471,37 @@ int game_control(int tx[], int ty[], int hx[], int hy[], int *found_count)
         *found_count = count;
 
         gotoxy(1, 1); set_color(14);
-        printf("¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬ º¸¹°Ã£±â °ÔÀÓ : VER 2.0 ¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬");
+        printf("â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” ë³´ë¬¼ì°¾ê¸° ê²Œì„ : VER 2.0 â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”");
 
         gotoxy(1, 2); set_color(15);
-        printf(" [À§Ä¡] X:%2d, Y:%2d | ", grid_x, grid_y);
+        printf(" [ìœ„ì¹˜] X:%2d, Y:%2d | ", grid_x, grid_y);
         
         if (max_moves - move_count <= 10) set_color(12);
         else set_color(15);
-        printf("[ÀÌµ¿] %2d / %2d È¸", move_count, max_moves);
+        printf("[ì´ë™] %2d / %2d íšŒ", move_count, max_moves);
         
         set_color(15);
-        printf(" | [ÈùÆ®] %d / 3 È¸", hint_count);
+        printf(" | [íŒíŠ¸] %d / 3 íšŒ", hint_count);
         
         gotoxy(1, 3); set_color(11);
-        printf(" [º¸¹° ÁøÇàµµ] ");
+        printf(" [ë³´ë¬¼ ì§„í–‰ë„] ");
         set_color(15);
-        if (count == 0) printf("¡Ù ¡Ù ¡Ù ");
-        else if (count == 1) printf("¡Ú ¡Ù ¡Ù ");
-        else if (count == 2) printf("¡Ú ¡Ú ¡Ù ");
-        else printf("¡Ú ¡Ú ¡Ú ");
-        printf(" (%d / 3°³ ¹ß°ß)                               ", count);
+        if (count == 0) printf("â˜† â˜† â˜† ");
+        else if (count == 1) printf("â˜… â˜† â˜† ");
+        else if (count == 2) printf("â˜… â˜… â˜† ");
+        else printf("â˜… â˜… â˜… ");
+        printf(" (%d / 3ê°œ ë°œê²¬)                               ", count);
 
         gotoxy(1, 19); set_color(8);
         printf("-----------------------------------------------------------------------");
         gotoxy(1, 20); set_color(7);
-        printf("[Á¶ÀÛ] ÀÌµ¿: ¹æÇâÅ° / WASD  |  ÈùÆ®: H  |  ÀÏ½ÃÁ¤Áö: ESC");
+        printf("[ì¡°ì‘] ì´ë™: ë°©í–¥í‚¤ / WASD  |  íŒíŠ¸: H  |  ì¼ì‹œì •ì§€: ESC");
 
         if (count >= 3)
         {
             gotoxy(1, 22);
             set_color(10);
-            printf(" GAME CLEAR - ¸ğµç º¸¹°À» Ã£¾Æ³Â½À´Ï´Ù!                                    \n");
+            printf(" GAME CLEAR - ëª¨ë“  ë³´ë¬¼ì„ ì°¾ì•„ëƒˆìŠµë‹ˆë‹¤!                                    \n");
             Beep(523, 120);
             Beep(659, 120);
             Beep(784, 120);
@@ -513,7 +513,7 @@ int game_control(int tx[], int ty[], int hx[], int hy[], int *found_count)
         {
             gotoxy(1, 22);
             set_color(12);
-            printf("GAME OVER - ÀÌµ¿ È½¼ö¸¦ ¸ğµÎ ¼ÒÁøÇß½À´Ï´Ù!                                \n");
+            printf("GAME OVER - ì´ë™ íšŸìˆ˜ë¥¼ ëª¨ë‘ ì†Œì§„í–ˆìŠµë‹ˆë‹¤!                                \n");
             Beep(300, 250);
             Beep(200, 400);
             break;
@@ -524,7 +524,7 @@ int game_control(int tx[], int ty[], int hx[], int hy[], int *found_count)
         gotoxy(2 * grid_x + 3, grid_y + 5);
         if (matrix[grid_x][grid_y] == 2) {
             set_color(14);
-            printf("¡Ú");
+            printf("â˜…");
         }
         else if (matrix[grid_x][grid_y] == 3) {
             set_color(12);
@@ -532,14 +532,14 @@ int game_control(int tx[], int ty[], int hx[], int hy[], int *found_count)
         }
         else {
             set_color(8);
-            printf("¡à");
+            printf("â–¡");
         }
 
         if (key == 27)
         {
             gotoxy(1, 22);
             set_color(10);
-            printf("[ÀÏ½ÃÁ¤Áö] 1: °è¼ÓÇÏ±â / 2: °ÔÀÓÁ¾·á                                    ");
+            printf("[ì¼ì‹œì •ì§€] 1: ê³„ì†í•˜ê¸° / 2: ê²Œì„ì¢…ë£Œ                                    ");
             char select = getch();
             if (select == '2')
             {
@@ -568,14 +568,14 @@ int game_control(int tx[], int ty[], int hx[], int hy[], int *found_count)
                 if (target_idx != -1)
                 {
                     int dist = abs(grid_x - tx[target_idx]) + abs(grid_y - ty[target_idx]);
-                    printf("[ÈùÆ®] ³²Àº º¸¹°±îÁö °Å¸® ¾à %dÄ­! (³²Àº ÈùÆ®: %d / 3È¸)        ", dist, hint_count);
+                    printf("[íŒíŠ¸] ë‚¨ì€ ë³´ë¬¼ê¹Œì§€ ê±°ë¦¬ ì•½ %dì¹¸! (ë‚¨ì€ íŒíŠ¸: %d / 3íšŒ)        ", dist, hint_count);
                     Beep(800, 150);
                 }
             }
             else
             {
                 gotoxy(1, 22); set_color(15);
-                printf("ÈùÆ®¸¦ ¸ğµÎ »ç¿ëÇÏ¼Ì½À´Ï´Ù! (³²Àº ÈùÆ®: 0/3È¸)                            ");
+                printf("íŒíŠ¸ë¥¼ ëª¨ë‘ ì‚¬ìš©í•˜ì…¨ìŠµë‹ˆë‹¤! (ë‚¨ì€ íŒíŠ¸: 0/3íšŒ)                            ");
                 Beep(250, 200);
             }
         }
